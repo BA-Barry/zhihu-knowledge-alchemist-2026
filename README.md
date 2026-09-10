@@ -1,6 +1,6 @@
 # 知乎技术知识炼金助手
 
-> 当前状态：匿名 Demo、官方实时 API 与 12 个知识炼金 Skill 已可运行；官方 CLI 与 Access Secret 已完成真实验收。用户已选择接入 OAuth，正在等待 App ID、App Key 与公网 HTTPS 回调以完成官方 OAuth 模板迁移。
+> 当前状态：匿名 Demo、官方实时 API 与 12 个知识炼金 Skill 已可运行；官方 CLI 与 Access Secret 已完成真实验收。用户已选择接入 OAuth，Sealos 部署表单已准备，正等待确认创建公网资源及取得 App ID、App Key。
 
 把知乎公开讨论转化为有来源边界的观点对照、知识简报、学习卡片和可验证行动路线。
 
@@ -42,7 +42,7 @@ chmod +x ./启动Demo-mac.command
 powershell -ExecutionPolicy Bypass -File .\启动正式版-windows.ps1
 ```
 
-密钥不要写入源码、截图、数据库或仓库。详细说明见 [使用说明.md](使用说明.md) 和 [docs/知乎API配置说明.md](docs/知乎API配置说明.md)。
+密钥不要写入源码、截图、数据库或仓库。详细说明见 [使用说明.md](使用说明.md)、[docs/知乎API配置说明.md](docs/知乎API配置说明.md) 和 [docs/跨账号与换机指南.md](docs/跨账号与换机指南.md)。
 
 ## 比赛提交
 
