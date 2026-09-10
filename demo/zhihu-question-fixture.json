@@ -1,0 +1,52 @@
+{
+  "question": {
+    "kind": "question",
+    "id": "demo-plant-watering",
+    "author": "匿名提问者",
+    "title": "小户型里怎样设计更可靠的室内植物自动浇水系统？",
+    "url": "https://www.zhihu.com/question/DEMO",
+    "content": "希望系统能够判断盆土是否需要浇水，避免只按固定时间浇水造成烂根；设备应适合租房环境，停电或网络中断时也不能一次性放出大量水。",
+    "metadata": {
+      "fixture": true,
+      "notice": "完全虚构的公开演示素材"
+    }
+  },
+  "answers": [
+    {
+      "kind": "answer",
+      "id": "demo-answer-a",
+      "author": "匿名用户A",
+      "title": "",
+      "url": "",
+      "content": "用电容式土壤湿度传感器比裸露电极更耐腐蚀。建议为每盆植物单独校准干湿阈值，并用蠕动泵控制水量。固定时间表只能作为兜底，不能作为主要判断。",
+      "metadata": {"fixture": true, "voteup_count": 128}
+    },
+    {
+      "kind": "answer",
+      "id": "demo-answer-b",
+      "author": "匿名用户B",
+      "title": "",
+      "url": "",
+      "content": "单点湿度读数容易受到插入深度和土壤盐分影响。更可靠的办法是结合盆栽重量变化、环境温湿度和最近一次浇水量，用趋势而不是一个瞬时数值做判断。",
+      "metadata": {"fixture": true, "voteup_count": 96}
+    },
+    {
+      "kind": "answer",
+      "id": "demo-answer-c",
+      "author": "匿名用户C",
+      "title": "",
+      "url": "",
+      "content": "租房环境最重要的是漏水安全。水箱应低于花盆，水路默认关闭；控制器失联时不应继续浇水，并设置单次最大运行时间、每日累计水量上限和接水托盘传感器。",
+      "metadata": {"fixture": true, "voteup_count": 75}
+    },
+    {
+      "kind": "answer",
+      "id": "demo-answer-d",
+      "author": "匿名用户D",
+      "title": "",
+      "url": "",
+      "content": "不建议一开始就做复杂模型。先记录两周人工浇水、盆栽重量和叶片状态，建立每种植物的基线。没有真实标注数据时，所谓智能算法很可能只是更难调试的定时器。",
+      "metadata": {"fixture": true, "voteup_count": 61}
+    }
+  ]
+}

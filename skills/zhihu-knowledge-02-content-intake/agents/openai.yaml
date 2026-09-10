@@ -1,0 +1,4 @@
+interface:
+  display_name: "知乎内容采集"
+  short_description: "通过官方接口或匿名素材建立可追踪来源集合"
+  default_prompt: "Use $zhihu-knowledge-02-content-intake to import a Zhihu question and its answers into my local project."

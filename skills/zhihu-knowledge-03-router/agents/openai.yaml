@@ -1,0 +1,4 @@
+interface:
+  display_name: "知乎任务路由"
+  short_description: "依据本地来源与成果选择最早需要完成的阶段"
+  default_prompt: "Use $zhihu-knowledge-03-router to inspect my project and select the next knowledge-production stage."

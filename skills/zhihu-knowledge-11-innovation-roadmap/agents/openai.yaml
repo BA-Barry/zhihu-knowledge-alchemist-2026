@@ -1,0 +1,4 @@
+interface:
+  display_name: "知乎创新路线"
+  short_description: "把争议与证据缺口转化为可验证的研究或原型任务"
+  default_prompt: "Use $zhihu-knowledge-11-innovation-roadmap to propose evidence-bounded experiments and prototype routes."

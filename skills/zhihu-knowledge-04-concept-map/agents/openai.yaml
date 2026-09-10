@@ -1,0 +1,4 @@
+interface:
+  display_name: "知乎问题概念图"
+  short_description: "提取核心问题、概念、约束与未定义术语"
+  default_prompt: "Use $zhihu-knowledge-04-concept-map to build a source-linked concept map for the current project."

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="把知乎公开讨论转化为可核查、可学习、可继续探索的知识结构。">
+  <link rel="icon" href="data:,">
+  <title>知乎技术知识炼金助手</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="nav" aria-label="主导航">
+    <a class="brand" href="/" aria-label="知识炼金助手首页">
+      <span class="brand-mark" aria-hidden="true">知</span>
+      <span>知识炼金助手</span>
+    </a>
+    <div id="serviceState" class="service-state" role="status">正在检查服务</div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">知乎黑客松 2026 校园新锐季</p>
+        <h1>把分散回答，炼成知识。</h1>
+        <p class="lede">官方搜索负责取回真实讨论，知乎直答负责提炼共识、分歧、卡片与行动路线。</p>
+      </div>
+
+      <form id="alchemyForm" class="workbench">
+        <div class="field">
+          <label for="query">你想弄懂什么？</label>
+          <textarea id="query" name="query" rows="3" maxlength="300" required>普通人如何系统学习人工智能？</textarea>
+          <p class="helper">建议输入一个具体问题。一次会使用搜索与直答配额，重复问题优先读取本地缓存。</p>
+        </div>
+        <div class="form-row">
+          <div class="field compact">
+            <label for="count">参考内容数</label>
+            <select id="count" name="count">
+              <option value="6">6 条</option>
+              <option value="8" selected>8 条</option>
+              <option value="10">10 条</option>
+            </select>
+          </div>
+          <button id="runButton" class="button primary" type="submit">开始炼金</button>
+          <button id="demoButton" class="button secondary" type="button">载入演示</button>
+        </div>
+        <p id="formStatus" class="form-status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="project-bar" aria-label="项目概况">
+      <div>
+        <p class="project-label">当前主题</p>
+        <h2 id="title">正在读取项目</h2>
+      </div>
+      <div id="stats" class="stats"></div>
+      <a id="exportLink" class="text-link" href="/api/export?key=ZHIHU-DEMO-001">导出 Markdown</a>
+    </section>
+
+    <section class="results-section">
+      <div class="section-copy">
+        <h2>AI 炼金成果</h2>
+        <p>每项结论都从本次搜索结果出发。来源编号会保留在学习卡片和观点说明中。</p>
+      </div>
+      <div id="artifacts" class="artifact-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="sources-section">
+      <div class="section-copy">
+        <h2>证据来源</h2>
+        <p>查看 AI 使用了哪些知乎内容，以及作者、赞同和评论等原始线索。</p>
+      </div>
+      <div id="sources" class="source-list"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Access Secret 仅在服务端读取，不进入浏览器、数据库或导出文件。</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

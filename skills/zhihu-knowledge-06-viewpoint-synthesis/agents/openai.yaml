@@ -1,0 +1,4 @@
+interface:
+  display_name: "知乎观点综合"
+  short_description: "保留来源边界地整理共识、分歧、条件和盲点"
+  default_prompt: "Use $zhihu-knowledge-06-viewpoint-synthesis to create a source-linked viewpoint matrix."

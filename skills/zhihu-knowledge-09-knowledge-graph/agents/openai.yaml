@@ -1,0 +1,4 @@
+interface:
+  display_name: "知乎知识图谱"
+  short_description: "生成概念、观点、证据与问题之间的关系网络"
+  default_prompt: "Use $zhihu-knowledge-09-knowledge-graph to build a source-aware graph for the current project."

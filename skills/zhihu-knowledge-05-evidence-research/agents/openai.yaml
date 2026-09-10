@@ -1,0 +1,4 @@
+interface:
+  display_name: "知乎证据检索"
+  short_description: "为社区技术主张补充可核查的一手外部证据"
+  default_prompt: "Use $zhihu-knowledge-05-evidence-research to verify the project's key claims with authoritative sources."

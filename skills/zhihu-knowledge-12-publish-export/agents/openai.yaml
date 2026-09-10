@@ -1,0 +1,4 @@
+interface:
+  display_name: "知乎成果导出"
+  short_description: "汇总项目成果并生成本地发布包和演示材料"
+  default_prompt: "Use $zhihu-knowledge-12-publish-export to create a local publication package for my project."

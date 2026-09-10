@@ -1,0 +1,4 @@
+interface:
+  display_name: "知乎学习卡片"
+  short_description: "把知识简报转化为概念卡、判断卡和情境问答"
+  default_prompt: "Use $zhihu-knowledge-08-learning-cards to create evidence-bounded study cards for this project."

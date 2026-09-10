@@ -1,0 +1,8 @@
+.git
+.codex
+skills
+tests
+docs
+*.zip
+*.db
+__pycache__

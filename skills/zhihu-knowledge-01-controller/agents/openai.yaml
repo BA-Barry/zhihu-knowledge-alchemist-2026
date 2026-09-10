@@ -1,0 +1,4 @@
+interface:
+  display_name: "知乎知识炼金总控"
+  short_description: "启动并调度知乎内容到知识产品的完整工作流"
+  default_prompt: "Use $zhihu-knowledge-01-controller to start a local Zhihu knowledge-alchemy project from my question or supplied content."

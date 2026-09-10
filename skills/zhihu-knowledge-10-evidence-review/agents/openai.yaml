@@ -1,0 +1,4 @@
+interface:
+  display_name: "知乎证据复核"
+  short_description: "检查来源映射、证据强度、冲突和过度推断"
+  default_prompt: "Use $zhihu-knowledge-10-evidence-review to audit the project's claims before publication."
