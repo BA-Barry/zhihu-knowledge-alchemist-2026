@@ -1,10 +1,12 @@
 # 知乎技术知识炼金助手
 
-> 当前状态：匿名 Demo、官方实时 API 与 12 个知识炼金 Skill 已可运行；官方 CLI 与 Access Secret 已完成真实验收。用户已选择接入 OAuth，Sealos 部署表单已准备，正等待确认创建公网资源及取得 App ID、App Key。
+> 当前状态：匿名 Demo、官方实时 API 与 12 个知识炼金 Skill 已可运行；官方 CLI 与 Access Secret 已完成本地真实验收。匿名 Demo 已部署到 Sealos 并通过公网验收；OAuth 还等待 App ID、App Key 和轮换后的 Access Secret。
 
 把知乎公开讨论转化为有来源边界的观点对照、知识简报、学习卡片和可验证行动路线。
 
 本项目参加“知乎黑客松 2026 校园新锐季”的“知识炼金场”赛道。知乎官方搜索提供真实社区讨论，知乎直答完成证据有界的 AI 提炼。项目不依赖外部协作平台。
+
+公网体验：<https://pnnsklzkknse.sealoshzh.site>
 
 ## 已实现
 
