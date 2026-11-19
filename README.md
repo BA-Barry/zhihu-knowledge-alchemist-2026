@@ -1,23 +1,37 @@
 # 知乎技术知识炼金助手
 
-> 当前状态：匿名 Demo、官方实时 API 与 12 个知识炼金 Skill 已可运行；官方 CLI 与 Access Secret 已完成本地真实验收。匿名 Demo 已部署到 Sealos 并通过公网验收；OAuth 还等待 App ID、App Key 和轮换后的 Access Secret。
+把分散在知乎问题和回答中的多元观点，转化为可核查、可复习、可继续行动的结构化知识。
 
-把知乎公开讨论转化为有来源边界的观点对照、知识简报、学习卡片和可验证行动路线。
+**在线体验：** <https://pnnsklzkknse.sealoshzh.site>
 
-本项目参加“知乎黑客松 2026 校园新锐季”的“知识炼金场”赛道。知乎官方搜索提供真实社区讨论，知乎直答完成证据有界的 AI 提炼。项目不依赖外部协作平台。
+> 当前可直接使用匿名 Demo 体验完整流程。配置知乎开放平台 Access Secret 后，可使用官方搜索和直答接口处理真实问题。
 
-公网体验：<https://pnnsklzkknse.sealoshzh.site>
+## 它能做什么
 
-## 已实现
+用户输入一个想弄懂的问题，系统从相关讨论中提取并呈现四类成果：
 
-- 一个可点击的 Web 产品流程：输入问题，获得搜索来源与四类知识成果；
-- 对接知乎开放平台 `zhihu_search`、`global_search`、`hot_list` 和 `chat/completions`；
-- Access Secret 仅由服务端环境变量读取，请求携带官方要求的时间戳；
-- 搜索、热榜和直答结果本地缓存，减少比赛配额消耗；
-- 12 个知识炼金 Codex Skills；
-- 原样内置官方 `zhihu-hackathon` Skill 及其 `zhihu` CLI Skill 0.2.1；
-- 匿名 Demo、Markdown 导出、SQLite 存储、Windows 和 macOS 安装脚本；
-- Docker 公网部署能力和自动化测试。
+1. **问题—概念—约束图**：明确真正要解决的问题、关键概念和现实边界；
+2. **观点对照**：分开展示共识、分歧、适用条件和未解问题；
+3. **学习卡片**：把关键结论改写为可自测、可复习的问答材料；
+4. **创新路线**：将争议和证据缺口转化为可执行、可验证的下一步。
+
+每项结论都保留来源边界。用户可以回看原始内容，也可导出 Markdown 继续学习、研究或创作。
+
+## 知乎与 AI 如何分工
+
+- **知乎**：提供真实问题、多元回答、作者与社区互动语境，并通过官方搜索召回相关内容；
+- **AI**：对齐跨来源概念，区分共识和冲突，生成知识结构、学习卡片与验证路线；
+- **系统边界**：赞同数和评论数只是社区语境，不作为真假判断；模型不把多位作者的内容拼成任何人的原话。
+
+## 主要能力
+
+- 可点击的 Web 完整流程：输入、加载、结果、来源核查与导出；
+- 对接 `zhihu_search`、`global_search`、`hot_list` 和 `chat/completions`；
+- 搜索、热榜和直答结果本地缓存，减少重复调用和配额消耗；
+- 12 个可组合的 Codex Skills，覆盖采集、概念图、证据研究、观点综合、简报、卡片、知识图谱、复核和发布；
+- SQLite 本地数据库、Markdown 导出、Windows/macOS 安装与启动脚本；
+- Docker 镜像和 GitHub Actions 自动构建；
+- Access Secret 仅由服务端环境变量读取，不进入浏览器、数据库或导出文件。
 
 ## 30 秒体验
 
@@ -34,18 +48,31 @@ chmod +x ./启动Demo-mac.command
 ./启动Demo-mac.command
 ```
 
-浏览器会打开本地产品页。点击“载入演示”无需密钥；配置 Access Secret 后可点击“开始炼金”运行官方实时流程。
+浏览器打开后点击“载入演示”，无需账号或密钥。
 
-## 实时模式
+## 使用真实知乎数据
 
-从 [知乎开发者平台](https://developer.zhihu.com/profile) 获取 Access Secret，然后运行安全启动脚本。脚本会隐藏输入，且不会把密钥保存到磁盘：
+从 [知乎开发者平台](https://developer.zhihu.com/profile) 获取 Access Secret，然后运行安全启动脚本：
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\启动正式版-windows.ps1
 ```
 
-密钥不要写入源码、截图、数据库或仓库。详细说明见 [使用说明.md](使用说明.md)、[docs/知乎API配置说明.md](docs/知乎API配置说明.md) 和 [docs/跨账号与换机指南.md](docs/跨账号与换机指南.md)。
+脚本会隐藏输入，且不会把密钥保存到磁盘。详细说明见 [使用说明.md](使用说明.md) 和 [docs/知乎API配置说明.md](docs/知乎API配置说明.md)。
 
-## 比赛提交
+## 项目结构
 
-必交项是公网体验链接与产品方案文档。推荐再提交公开代码仓库和演示视频。当前准备情况见 [docs/官方要求核对清单.md](docs/官方要求核对清单.md)。
+- `runtime/`：官方 API、缓存、数据库与 Web 服务；
+- `runtime/web/`：原生 HTML/CSS/JS 产品页；
+- `skills/`：12 个知识炼金 Skills；
+- `demo/`：不消耗外部接口配额的匿名演示数据；
+- `tests/`：核心运行时与 Web API 自动测试；
+- `docs/`：产品、架构、部署、OAuth 与验收记录。
+
+## 验证
+
+```powershell
+python -m unittest discover -s tests -v
+```
+
+当前自动测试覆盖官方搜索字段归一化、缓存与软限额、结构化成果、业务错误、匿名 Demo、健康接口和 Markdown 导出。
