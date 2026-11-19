@@ -39,7 +39,7 @@ jobs:
           push: true
           platforms: linux/amd64
           tags: |
-            ghcr.io/ba-lau/zhihu-knowledge-alchemist-2026:bootstrap
-            ghcr.io/ba-lau/zhihu-knowledge-alchemist-2026:latest
+            ghcr.io/ba-barry/zhihu-knowledge-alchemist-2026:bootstrap
+            ghcr.io/ba-barry/zhihu-knowledge-alchemist-2026:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
